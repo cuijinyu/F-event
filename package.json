@@ -1,0 +1,21 @@
+{
+  "name": "f-bus",
+  "version": "1.0.0",
+  "description": "a simple but powerful bus",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "keywords": [
+    "bus"
+  ],
+  "author": "cuijinyu",
+  "license": "MIT",
+  "dependencies": {
+    "babel": "^6.23.0"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-es2015": "^6.24.1"
+  }
+}
