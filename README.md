@@ -1,5 +1,9 @@
 # F-event
 Small but Powerful event handler
+
+为什么要做这个呢，是因为在兼职写一个没有很好工程结构的项目的时候，需要用到这样一个模型，于是就诞生了这么一个项目，功能简单，目标明确~
+
+have fun~
 ## 安装
 browser
 ```
