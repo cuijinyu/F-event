@@ -34,3 +34,4 @@ bus.remove('${eventName}', function)  //  function指代要删除的function
 ## 待完成API
   - 事件触发历史
   - 消息订阅
+  - 命名空间
