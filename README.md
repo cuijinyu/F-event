@@ -1,6 +1,11 @@
 # F-event
 Small but Powerful event handler
 ## 安装
+browser
+```
+clone本项目，引入f-bus.es5.browser.js
+```
+npm
 ```
 npm install f-event
 ```
