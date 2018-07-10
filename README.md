@@ -1,5 +1,9 @@
 # F-event
 Small but Powerful event handler
+## 安装
+```
+npm install f-event
+```
 ## API
 目前共有两种创建事件的方法
 
