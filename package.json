@@ -1,5 +1,5 @@
 {
-  "name": "f-bus",
+  "name": "f-event",
   "version": "1.0.0",
   "description": "a simple but powerful bus",
   "main": "index.js",
