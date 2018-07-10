@@ -13,5 +13,14 @@ bus_2.emit("test");
 bus_3.on("test", function () {
     console.log("bus3");
 });
+bus_3.once("test", function () {
+    console.log("once");
+});
+
+console.log(bus_3.getListener("test"));
 
 bus_3.emit("test");
+bus_3.emit("test");
+bus_3.emit("test");
+
+console.log(bus_3.history());

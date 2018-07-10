@@ -22,6 +22,11 @@ class F_bus {
         if (this.handler[key] && this.handler[key].length > 0){
             for (let i = 0;i < this.handler[key].length; i ++) {
                 this.handler[key][i].apply(this, arguments);
+                this.cache.push({
+                    type:'once',
+                    func:this.handler[key][i],
+                    time:Date()
+                })
             }
         }
         if (this.handlerOnce[key] && this.handlerOnce[key].length > 0) {
@@ -29,7 +34,8 @@ class F_bus {
                 this.handlerOnce[key][i].apply(this, arguments);
                 this.cache.push({
                     type:'once',
-                    func:this.handlerOnce[key][i]
+                    func:this.handlerOnce[key][i],
+                    time:Date()
                 })
             }
             delete this.handlerOnce[key];
@@ -87,6 +93,9 @@ class F_bus {
             })
         }
         return result;
+    }
+    history () {
+        return this.cache;
     }
 }
 

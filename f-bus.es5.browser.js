@@ -132,8 +132,3 @@ var Fbus = function () {
         } else return bus;
     }();
 }();
-
-module.exports = {
-    Fbus: Fbus,
-    F_bus: F_bus
-};

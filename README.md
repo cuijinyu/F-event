@@ -23,15 +23,28 @@ bus.on('${eventName}', () => {
   //callback
 })
 ```
+单次订阅事件 
+```
+bus.once('${eventName}', () => {
+  //callback
+})
+
+```
+获取选定事件的所有回调函数
+```
+bus.getListener('${eventName}')
+```
 触发事件
 ```
 bus.emit('${eventName}', arguments)
 ```
 删除事件
 ```
-bus.remove('${eventName}', function)  //  function指代要删除的function
+bus.remove('${eventName}', function, type)  //  function指代要删除的function type指定所要删除的事件类型once代表一次监听normal代表普通
+```
+历史事件
+```
+bus.history();
 ```
 ## 待完成API
-  - 事件触发历史
-  - 消息订阅
   - 命名空间
