@@ -2,6 +2,7 @@
 <p align="center">
   <a><img src="https://img.shields.io/npm/v/f-event.svg?style=flat"></a>
   <a><img src="https://www.travis-ci.org/cuijinyu/F-event.svg?branch=master"></a>
+  <a href="https://www.npmjs.com/package/san"><img src="https://img.shields.io/npm/dm/f-event.svg?style=flat-square" alt="Downloads"></a>
 </p>
 Small but Powerful event handler
 
