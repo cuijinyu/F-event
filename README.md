@@ -1,4 +1,7 @@
 # F-event
+<p align="center">
+  <a><img src="https://img.shields.io/npm/v/f-event.svg?style=flat"></a>
+</p>
 Small but Powerful event handler
 
 为什么要做这个呢，是因为在兼职写一个没有很好工程结构的项目的时候，需要用到这样一个模型，于是就诞生了这么一个项目，功能简单，目标明确~
@@ -55,5 +58,16 @@ bus.remove('${eventName}', function, type)  //  function指代要删除的functi
 ```
 bus.history();
 ```
+命名空间
+```
+bus.enablens(); //启动命名空间功能，必须！ 此时原事件命名空间为'default'
+bus.ns('${namespaceName}'); //此处返回了bus本身，并且已经切换命名空间，若不存在当前命名空间，则创建
+```
+命名空间eg:
+```
+bus.enablens();
+bus.ns('ns1').on('ns1Test', () => {});
+bus.emit('ns1Test');
+```
 ## 待完成API
-  - 命名空间
+  - 在想

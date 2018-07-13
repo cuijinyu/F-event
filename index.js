@@ -4,6 +4,8 @@ class F_bus {
         this.handlerOnce = {};
         this.cache = [];
         this.nameSpace = {};
+        this.nameSpaceState = false;
+        this.selectedNameSpace = '';
     }
     on (event, cb) {
         if (this.handler[event] === undefined) {
@@ -96,6 +98,36 @@ class F_bus {
     }
     history () {
         return this.cache;
+    }
+    enablens () {
+        this.nameSpaceState = true;
+        this.nameSpace['default'] = {
+            handler:{},
+            handlerOnce:{}
+        };
+        this.nameSpace['default'].handler = this.handler;
+        this.nameSpace['default'].handlerOnce = this.handlerOnce;
+        this.handler = this.nameSpace['default'].handler;
+        this.handlerOnce = this.nameSpace['default'].handlerOnce;
+    }
+    ns (namespace) {
+        if (!this.nameSpaceState) {
+            console.error("[ERROR]namespace is not open");
+            throw "[ERROR]namespace is not open";
+        }
+        this.selectedNameSpace = namespace;
+        if (this.nameSpace[namespace] === undefined) {
+            this.nameSpace[namespace] = {
+                handler:{},
+                handlerOnce:{}
+            };
+            this.handler = this.nameSpace[namespace].handler;
+            this.handlerOnce = this.nameSpace[namespace].handlerOnce;
+        } else {
+            this.handler = this.nameSpace[namespace].handler;
+            this.handlerOnce = this.nameSpace[namespace].handlerOnce;
+        }
+        return this;
     }
 }
 
