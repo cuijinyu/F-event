@@ -1,6 +1,7 @@
 # F-event
 <p align="center">
   <a><img src="https://img.shields.io/npm/v/f-event.svg?style=flat"></a>
+  <a><img src="https://www.travis-ci.org/cuijinyu/f-event.svg?branch=master"></a>
 </p>
 Small but Powerful event handler
 
